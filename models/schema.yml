@@ -9,6 +9,6 @@ sources:
       - name: raw_gz_product
         identifier: raw_gz_product
         description: ceci est la table des produits
-      - name: raw_gz_sales
+      - name: raw_gz_ship
         identifier: raw_gz_ship
         description: ceci est la table des livraisons
