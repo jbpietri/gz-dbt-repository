@@ -1,14 +1,14 @@
 version: 2
 
 sources:
-  - name: raw_gz_data
-    tables: 
-    - name: sales
-      identifier: raw_gz_sales
-      description: ceci est le nom de la table sales
-    - name: raw_gz_product
-      identifier: raw_gz_product
-      description: ceci est la table des produits
-    - name: raw_gz_sales
-      identifier: raw_gz_ship
-      description: ceci est la table des livraisons 
+  - name: gz_raw_data
+    tables:
+      - name: sales
+        identifier: raw_gz_sales
+        description: ceci est le nom de la table sales
+      - name: raw_gz_product
+        identifier: raw_gz_product
+        description: ceci est la table des produits
+      - name: raw_gz_sales
+        identifier: raw_gz_ship
+        description: ceci est la table des livraisons
