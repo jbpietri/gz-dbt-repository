@@ -7,9 +7,34 @@ sources:
     - name: product
       identifier: raw_gz_product
       description: table produits
+      columns: 
+        - name: products_id
+          description: les id produit
+        - name: purchase_price
+          description: prix produit
     - name: sales
       identifier: raw_gz_sales 
       description: table sales
+      columns: 
+        - name: date_date
+          description: date de transaction
+        - name: orders_id
+          description: id de la commande
+        - name: product_id
+          description: id du produit
+        - name: revenue
+          description: le revenu associé
+        - name: quantity
+          description: la quantité associée
     - name: ship
       identifier: raw_gz_ship
       description: table transports
+      columns: 
+        - name: orders_id
+          description: id de la commande
+        - name: shipping_fee
+          description: frais de transport
+        - name: logcost
+          description: frais de log
+        - name: ship_cost
+          description: frais de transport
