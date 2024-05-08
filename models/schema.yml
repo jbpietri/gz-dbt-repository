@@ -18,6 +18,9 @@ sources:
     - name: sales
       identifier: raw_gz_sales 
       description: table sales
+      tests:
+        - unique: 
+            column_name: (orders_id|| '-'||pdt_id)
       columns: 
         - name: date_date
           description: date de transaction
@@ -29,9 +32,6 @@ sources:
           description: le revenu associé
         - name: quantity
           description: la quantité associée
-      tests:
-        - unique: 
-            column_name: "(orders_id|| '-'||product_id)"
     - name: ship
       identifier: raw_gz_ship
       description: table transports
