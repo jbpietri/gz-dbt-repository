@@ -9,7 +9,10 @@ sources:
       description: table produits
       columns: 
         - name: products_id
-          description: les id produit
+          description: primary key de la table produit
+          tests:
+            - unique
+            - not_null
         - name: purchase_price
           description: prix produit
     - name: sales
