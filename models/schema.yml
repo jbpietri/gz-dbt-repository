@@ -29,12 +29,18 @@ sources:
           description: le revenu associé
         - name: quantity
           description: la quantité associée
+      tests:
+        - unique: 
+            column_name: "(orders_id|| '-'||product_id)"
     - name: ship
       identifier: raw_gz_ship
       description: table transports
       columns: 
         - name: orders_id
-          description: id de la commande
+          description: primary key de la table ship
+          tests: 
+            - unique
+            - not_null
         - name: shipping_fee
           description: frais de transport
         - name: logcost
