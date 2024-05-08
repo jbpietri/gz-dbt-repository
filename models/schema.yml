@@ -1,42 +1,15 @@
 version: 2
 
-sources:
-  - name: gz_raw_data
-    tables:
-      - name: sales
-        identifier: raw_gz_sales
-        description: ceci est le nom de la table sales
-        columns:
-          - name: date_date
-            description: date of sales
-          - name : orders_id
-            description: the id for each order
-          - name: product_id
-            description: the id of each product
-          - name: revenue
-            description: the revenue for each sale
-          - name : quantity
-            description : the quantity associated
-      - name: raw_gz_product
-        identifier: raw_gz_product
-        description: ceci est la table procucts
-        columns: 
-            - name: products_id
-              description: primary key of the table
-              tests: 
-                - unique
-                - not_null 
-            - name: purchase_price
-              description: the price of purchase
-      - name: raw_gz_ship
-        identifier: raw_gz_ship
-        description: ceci est la table des livraisons
-        columns:
-            - name: orders_id
-              description: id of orders
-            - name: shipping_fee
-              description: the fees for shipping service
-            - name: logcost
-              description: the cost for logging
-            - name: ship_cost
-              description: the costs of shipping
+sources: 
+  - name: source1
+    schema: gz_raw_data
+    tables: 
+    - name: product
+      identifier: raw_gz_product
+      description: table produits
+    - name: sales
+      identifier: raw_gz_sales 
+      description: table sales
+    - name: ship
+      identifier: raw_gz_ship
+      description: table transports
